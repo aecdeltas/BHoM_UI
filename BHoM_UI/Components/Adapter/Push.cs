@@ -66,7 +66,7 @@ namespace BH.UI.Components
         [Input("active", "Execute the push")]
         [MultiOutput(0, "objects", "Objects that have been pushed(with potentially additional information stored in their CustomData to reflect the push)")]
         [MultiOutput(1, "success", "Define if the push was sucessful")]
-        public static Output<List<IObject>, bool> Push(BHoMAdapter adapter, IEnumerable<IObject> objects, string tag = "", Dictionary<string, object> config = null, bool active = false)
+        public static Output<List<IObject>, bool> Push(BHoMAdapter adapter, IEnumerable<IObject> objects, string tag = "", Dictionary<string, object> config = null, bool active = false, bool toSpeckle = false)
         {
             List<IObject> result = new List<IObject>();
             if (active)
