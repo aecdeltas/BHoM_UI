@@ -85,7 +85,7 @@ namespace BH.UI.Components
         [Input("config", "Pull config")]
         [Input("active", "Execute the pull")]
         [Output("Objects pulled")]
-        public static IEnumerable<object> Pull(BHoMAdapter adapter, IQuery query = null, Dictionary<string, object> config = null, bool active = false)
+        public static IEnumerable<object> Pull(BHoMAdapter adapter, IQuery query = null, Dictionary<string, object> config = null, bool active = false, bool toSpeckle = false)
         {
             if (query == null)
                 query = new FilterQuery();
