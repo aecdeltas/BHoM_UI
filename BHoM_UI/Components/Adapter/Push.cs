@@ -39,13 +39,12 @@ namespace BH.UI.Components
         /*************************************/
         /**** Properties                  ****/
         /*************************************/
-
+ 
         public override System.Drawing.Bitmap Icon_24x24 { get; protected set; } = Properties.Resources.Push;
 
         public override Guid Id { get; protected set; } = new Guid("F27E94AD-6939-41AA-B680-094BA245F5C1");
 
         public override string Category { get; protected set; } = "Adapter";
-
 
         /*************************************/
         /**** Constructors                ****/
@@ -71,9 +70,6 @@ namespace BH.UI.Components
             List<IObject> result = new List<IObject>();
             if (active)
                 result = adapter.Push(objects, tag, config);
-
-
-
 
             return BH.Engine.Reflection.Create.Output(result, result.Count() == objects.Count());
         }
